@@ -1,0 +1,25 @@
+.top-bar {
+  display: flex;
+  align-items: center;
+  column-gap: 88px;
+
+  &__logo {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 100%;
+    text-align: center;
+
+    @include onTablet {
+      grid-column: 4 / span 2;
+      font-size: 36px;
+    }
+
+    @include onDesktop {
+      grid-column: 7 / span 2;
+    }
+  }
+
+  @include onTablet {
+    @include pageGrid;
+  }
+}

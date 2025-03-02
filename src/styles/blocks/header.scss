@@ -1,0 +1,123 @@
+.header {
+  position: relative;
+
+  &__bottom {
+    @include pageGrid;
+    row-gap: 20px;
+
+    @include onTablet {
+      row-gap: 38px;
+    }
+
+    @include onDesktop {
+      row-gap: 89px;
+      grid-column: 1 / span 6;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 250px;
+    padding-top: 10px;
+
+    @include onTablet {
+      padding-top: 15px;
+      padding-bottom: 18px;
+      row-gap: 40px;
+    }
+
+    @include onDesktop {
+      row-gap: 120px;
+      padding-bottom: 118px;
+    }
+  }
+
+  &__image {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 300px;
+    width: 100%;
+    background-image: url('../images/header/natsionalnij-hudozhnij-muzej-ukrayini-kiyiv-desktop.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @include onTablet {
+      width: 50vw;
+      height: 384px;
+    }
+
+    @include onDesktop {
+      height: 655px;
+    }
+  }
+
+  &__title {
+    font-size: 45px;
+    line-height: 100%;
+    text-align: center;
+    grid-column: 1 / -1;
+
+    @include onTablet {
+      font-size: 54px;
+      line-height: 64.8px;
+      text-align: left;
+      grid-column: 1 / span 3;
+    }
+
+    @include onDesktop {
+      font-size: 72px;
+      line-height: 86.4px;
+      grid-column: 1 / span 5;
+    }
+  }
+
+  &__link {
+    position: relative;
+    box-sizing: border-box;
+    font-family: IBM Plex Sans;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    font-weight: 500;
+    padding: 18px 130px 18px 80px;
+    border: 1px solid #1a5a4c;
+
+    grid-column: 1 / -1;
+
+    @include onTablet {
+      width: 270px;
+      height: 70px;
+      padding: 27px 138px 27px 68px;
+      grid-column: 1 / span 3;
+    }
+
+    @include onDesktop {
+      grid-column: 3 / 6;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50px;
+      height: 100%;
+      background-image: url('../images/icon/arrow.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #1a5a4c;
+
+      @include onTablet {
+        width: 70px;
+      }
+    }
+  }
+}

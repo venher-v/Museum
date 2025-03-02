@@ -1,7 +1,14 @@
-@import 'utils';
-@import 'fonts';
-@import 'typography';
+@import './utils/normalize.scss';
+@import './utils/vars.scss';
+@import './utils/mixins.scss';
+
+@import 'blocks/page';
+@import 'blocks/container';
+@import 'blocks/top-bar';
+@import 'blocks/icon';
+@import 'blocks/header';
+
 
 body {
-  background: $c-gray;
+  font-family: "Montserrat", sans-serif;
 }

@@ -3,10 +3,14 @@
 @import './utils/mixins.scss';
 
 @import 'blocks/page';
+@import 'blocks/section-title';
 @import 'blocks/container';
 @import 'blocks/top-bar';
 @import 'blocks/icon';
 @import 'blocks/header';
+@import 'blocks/main-content';
+@import 'blocks/current';
+@import 'blocks/lecture';
 
 
 body {

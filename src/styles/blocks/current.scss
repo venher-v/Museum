@@ -1,0 +1,102 @@
+.current {
+  &__events {
+    display: grid;
+    row-gap: 60px;
+  }
+
+  &__event {
+    @include pageGrid;
+    row-gap: 16px;
+
+    @include onTablet {
+      row-gap: 40px;
+    }
+
+    &-image {
+      grid-column: span 2;
+
+      @include onTablet {
+        grid-column: span 7;
+      }
+    }
+
+    &-description {
+      grid-column: 1 / -1;
+
+      @include onDesktop {
+        grid-column: 9 / 13;
+        margin-block: auto;
+      }
+    }
+
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-block-end: 10px;
+      grid-column: span 2;
+
+      @include onTablet {
+        grid-column: span 2;
+        margin-block-end: 30px;
+      }
+
+      @include onDesktop {
+        justify-content: start;
+        gap: 30px;
+      }
+    }
+
+    &-type {
+      @extend %type-text;
+    }
+
+    &-date {
+      @extend %date-text;
+    }
+
+    &-content {
+      grid-column: span 2;
+      @include onTablet {
+        grid-column: 1 / span 4;
+      }
+
+      @include onDesktop {
+        grid-column: 8 / -1;
+      }
+    }
+
+    &-title {
+      position: relative;
+
+      display: inline-flex;
+      align-items: center;
+      font-family: $titleFont;
+      font-size: 28px;
+      line-height: 100%;
+      font-weight: 400;
+      margin-block-end: 10px;
+
+      @include onTablet {
+        font-size: 36px;
+        margin-block-end: 15px;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        inline-size: 10px;
+        block-size: 10px;
+        // margin: 0 0 0 12px;
+        margin-block-start: 5px;
+        margin-inline-start: 15px;
+        background-color: #f14a27;
+
+        @include onTablet {
+          inline-size: 15px;
+          block-size: 15px;
+        }
+      }
+    }
+  }
+}

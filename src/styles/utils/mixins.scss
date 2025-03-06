@@ -33,3 +33,19 @@
     column-gap: 30px;
   }
 }
+
+%date-text {
+  font-family: $mainFont;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #1a5a4c;
+}
+
+%type-text {
+  font-family: $mainFont;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #687480;
+}

@@ -1,0 +1,14 @@
+.main__content {
+  display: grid;
+  row-gap: 100px;
+  padding-block: 70px;
+
+  @include onTablet {
+    padding-block: 88px;
+  }
+
+  @include onDesktop {
+    row-gap: 200px;
+    padding-block: 200px;
+  }
+}

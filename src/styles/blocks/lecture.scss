@@ -1,0 +1,84 @@
+.lecture {
+  @include onTablet {
+    padding-inline: 34px;
+  }
+
+  @include onDesktop {
+    padding-inline: 0;
+  }
+
+  @include onTablet {
+    text-align: left;
+  }
+
+  &__item {
+  }
+
+  &__content {
+    position: relative;
+    inline-size: 80%;
+    margin-inline: auto;
+    padding-block-start: 24px;
+    padding-block-end: 20px;
+
+    box-shadow: 0px 2px 0px 0px rgba(26, 90, 76, 0.25);
+    background-color: #fff;
+
+    transform: translateY(-40%);
+
+    @include onTablet {
+      inline-size: 570px;
+      padding-inline: 55px;
+      padding-block-start: 45px;
+      padding-block-end: 50px;
+      margin-inline: auto;
+
+      transform: translateY(-40%);
+    }
+
+    @include onTablet {
+      padding-inline: 100px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-block-end: 20px;
+
+    @include onTablet {
+      justify-content: space-between;
+      margin-block-end: 16px;
+    }
+
+    &-type {
+      @extend %type-text;
+    }
+
+    &-date {
+      @extend %date-text;
+    }
+  }
+
+  &__title {
+    font-family: $titleFont;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 100%;
+    text-align: center;
+
+    @include onTablet {
+      font-size: 36px;
+      text-align: left;
+    }
+  }
+
+  &--margin-block-start {
+    margin-block-start: -40px;
+
+    @include onTablet {
+      margin-block-start: -60px;
+    }
+  }
+}

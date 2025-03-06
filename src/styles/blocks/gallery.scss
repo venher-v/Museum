@@ -1,0 +1,63 @@
+.gallery {
+  &__wrapper {
+  }
+
+  &__list {
+    overflow: hidden;
+    display: flex;
+
+    @include onTablet {
+      // після додавання свайпера потрібно видалити
+      grid-column: span 6;
+    }
+
+    @include onDesktop {
+      @include pageGrid;
+      grid-template-rows: auto;
+      row-gap: 30px;
+    }
+
+    &-item {
+      inline-size: 100%;
+      block-size: 100%;
+
+      grid-column: span 2;
+
+      @include onTablet {
+        // після додавання свайпера потрібно видалити
+        grid-column: span 6;
+      }
+
+      &--rectangle-vertical {
+        @include onDesktop {
+          grid-column: 1 / span 4;
+        }
+      }
+
+      &--rectangle-horizontal {
+        @include onDesktop {
+          grid-column: 1 / span 8;
+        }
+      }
+
+      &--square-big {
+        @include onDesktop {
+          grid-column: 5 / -1;
+        }
+      }
+
+      &--square-small {
+        @include onDesktop {
+          grid-column: 9 / -1;
+        }
+      }
+    }
+  }
+
+  &__image {
+    block-size: 100%;
+    inline-size: 100%;
+
+    object-fit: cover;
+  }
+}

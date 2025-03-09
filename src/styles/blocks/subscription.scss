@@ -1,0 +1,82 @@
+.subscription {
+  background-image: url(../images/subscription/subscription.webp);
+
+  &__wrapper {
+    @include pageGrid;
+  }
+
+  &__content {
+    grid-column: 1 / -1;
+    padding-block: 88px;
+
+    @include onTablet {
+      grid-column: 2 / 6;
+      padding-block: 82px;
+    }
+
+    @include onDesktop {
+      grid-column: 4 / 10;
+      padding-block: 162px;
+    }
+  }
+
+  &__title {
+    color: #ffffff;
+    margin-block-end: 20px;
+
+    @include onTablet {
+      text-align: center;
+      margin-block-end: 16px;
+    }
+  }
+
+  &__description {
+    margin-block-end: 50px;
+    color: #fff;
+    text-align: center;
+
+    @include onTablet {
+      margin-block-end: 64px;
+    }
+
+    @include onDesktop {
+      margin-block-end: 72px;
+    }
+  }
+
+  .subscription__form {
+    display: flex;
+
+    @include onTablet {
+      gap: 16px;
+    }
+
+    @include onDesktop {
+      gap: 30px;
+    }
+
+    &-input {
+      inline-size: 100%;
+      padding-inline: 32px;
+      color: inherit;
+
+      &::placeholder {
+        color: #687480;
+      }
+    }
+
+    &-button {
+      min-inline-size: 50px;
+      block-size: 50px;
+      background-color: #f14a27;
+      background-image: url(../images/icon/arrow-black.png);
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @include onTablet {
+        min-inline-size: 70px;
+        block-size: 70px;
+      }
+    }
+  }
+}

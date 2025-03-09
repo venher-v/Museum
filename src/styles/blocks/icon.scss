@@ -1,6 +1,8 @@
 .icon {
   width: 24px;
   height: 24px;
+  background-position: center;
+  background-size: cover;
 
   @include onTablet {
     width: 32px;
@@ -9,7 +11,13 @@
 
   &--menu {
     background-image: url('../images/icon/baseline-menu.png');
-    background-position: center;
-    background-size: cover;
+  }
+
+  &--facebook {
+    background-image: url(../images/icon/facebook-letter-logo.png);
+  }
+
+  &--instagram {
+    background-image: url(../images/icon/instagram.png);
   }
 }

@@ -26,6 +26,10 @@
       rel="stylesheet"
       href="./styles/main.scss"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -143,45 +147,52 @@
           </article>
         </section>
 
-        <section class="gallery">
+        <section class="galery">
           <div class="container">
             <h2 class="section-title">Галерея</h2>
 
-            <div class="gallery__wrapper">
-              <ul class="gallery__list">
-                <li
-                  class="gallery__list-item gallery__list-item--rectangle-vertical"
+            <div class="galery__wrapper swiper">
+              <div class="galery__list swiper-wrapper">
+                <div
+                  class="galery__list-item galery__list-item--rectangle-vertical swiper-slide"
                 >
                   <img
-                    src="./images/gallery/gallery-1.webp"
-                    alt="gallery-1"
-                    class="gallery__image"
+                    src="./images/galery/galery-1.webp"
+                    alt="galery-1"
+                    class="galery__image"
                   />
-                </li>
-                <li class="galery__list-item gallery__list-item--square-big">
-                  <img
-                    src="./images/gallery/gallery-2.webp"
-                    alt="gallery-1"
-                    class="gallery__image"
-                  />
-                </li>
-                <li
-                  class="galery__list-item gallery__list-item--rectangle-horizontal"
+                </div>
+                <div
+                  class="galery__list-item galery__list-item--square-big swiper-slide"
                 >
                   <img
-                    src="./images/gallery/gallery-3.webp"
-                    alt="gallery-1"
-                    class="gallery__image"
+                    src="./images/galery/galery-2.webp"
+                    alt="galery-1"
+                    class="galery__image"
                   />
-                </li>
-                <li class="galery__list-item gallery__list-item--square-small">
+                </div>
+                <div
+                  class="galery__list-item galery__list-item--rectangle-horizontal swiper-slide"
+                >
                   <img
-                    src="./images/gallery/gallery-4.webp"
-                    alt="gallery-1"
-                    class="gallery__image"
+                    src="./images/galery/galery-3.webp"
+                    alt="galery-1"
+                    class="galery__image"
                   />
-                </li>
-              </ul>
+                </div>
+                <div
+                  class="galery__list-item galery__list-item--square-small swiper-slide"
+                >
+                  <img
+                    src="./images/galery/galery-4.webp"
+                    alt="galery-1"
+                    class="galery__image"
+                  />
+                </div>
+              </div>
+              <div
+                class="swiper-pagination"
+              ></div>
             </div>
           </div>
         </section>
@@ -327,15 +338,20 @@
 
           <div class="footer__line"></div>
 
-
           <ul class="footer__nav footer__nav--left">
             <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link">
+              <a
+                href="#"
+                class="footer__nav-link"
+              >
                 Галерея
               </a>
             </li>
             <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link">
+              <a
+                href="#"
+                class="footer__nav-link"
+              >
                 Виставки та події
               </a>
             </li>
@@ -343,12 +359,18 @@
 
           <ul class="footer__nav footer__nav--right">
             <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link">
+              <a
+                href="#"
+                class="footer__nav-link"
+              >
                 Про Нас
               </a>
             </li>
             <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link">
+              <a
+                href="#"
+                class="footer__nav-link"
+              >
                 Контакти
               </a>
             </li>
@@ -356,6 +378,7 @@
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

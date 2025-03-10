@@ -1,10 +1,11 @@
-.gallery {
+.galery {
   &__wrapper {
   }
 
   &__list {
-    overflow: hidden;
-    display: flex;
+    // overflow: hidden;
+    // display: flex;
+    // min-width: 0;
 
     @include onTablet {
       // після додавання свайпера потрібно видалити
@@ -55,9 +56,10 @@
   }
 
   &__image {
-    block-size: 100%;
     inline-size: 100%;
+    block-size: 100%;
 
     object-fit: cover;
+    object-position: top;
   }
 }

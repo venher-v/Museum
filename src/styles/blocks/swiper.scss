@@ -1,0 +1,12 @@
+.swiper {
+  width: 300px;
+  height: 410px;
+
+  @include onTablet {
+    width: 700px;
+  }
+}
+
+.swiper-slide {
+  // width: calc(100% - 40px);
+}

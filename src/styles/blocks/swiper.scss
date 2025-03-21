@@ -18,24 +18,26 @@
   }
 
   &-pagination {
+    --swiper-pagination-bullet-size: 10px;
     --swiper-pagination-bottom: -20px;
     display: flex;
     justify-content: center;
     gap: 22px;
 
+    &-bullet {
+      --swiper-pagination-bullet-horizontal-gap: 0;
+      background-color: #e0e0e0;
+      opacity: 2;
+      inline-size: 9px;
+      block-size: 9px;
+
+      &-active {
+        background-color: #1a5a4c;
+      }
+    }
+
     @include onTablet {
       --swiper-pagination-bottom: -32px;
     }
   }
-}
-
-.my-bullet {
-  background-color: #e0e0e0;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
-.my-bullet-active {
-  background-color: #1a5a4c;
 }

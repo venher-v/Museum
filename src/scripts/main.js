@@ -4,8 +4,6 @@ let swiper = null;
 const galeryList = document.querySelector('.galery__list');
 
 function initSwiper() {
-  galeryList.classList.add('swiper-wrapper');
-
   swiper = new Swiper('.swiper', {
     loop: true,
     slidesPerView: 1.07,
@@ -20,8 +18,25 @@ function initSwiper() {
 
     pagination: {
       el: '.swiper-pagination',
-      bulletClass: 'my-bullet',
-      bulletActiveClass: 'my-bullet-active',
+      dynamicBullets: true,
+    },
+
+    watchOverflow: true,
+
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: true,
+    },
+
+    speed: 800,
+
+    on: {
+      slideChange: function () {
+        const pagination = document.querySelector('.swiper-pagination');
+        if (pagination) {
+          pagination.style.width = '';
+        }
+      },
     },
   });
 
@@ -31,7 +46,6 @@ function initSwiper() {
 function destroySwiper() {
   if (swiper) {
     swiper.destroy();
-    galeryList.classList.remove('swiper-wrapper');
     swiper = null;
   }
 
